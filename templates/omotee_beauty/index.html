@@ -1,0 +1,727 @@
+
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover luxury perfumes for women and men at Omotee Beauty store. Shop vegan, long-lasting fragrances crafted with rare ingredients like vanilla, oud, and jasmine. Find your signature scent with free shipping on orders over $50!"
+    />
+    <meta name="description" content="" />
+    <meta name="description" content="" />
+    <meta name="description" content="" />
+    <meta name="description" content="" />
+    <meta name="description" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="keywords" content="" />
+    <meta name="keywords" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="shortcut icon" href="{%static 'assets/png/logo-color.png'%}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css" integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/regular.min.css" integrity="sha512-8hM9a+2hrLBhOuB3uiy+QIXBsu6Qk+snsP1CboFQW6pdt/yYz0IcDp/+CGv5m39r9doGUc/zw6aBpyLF6XFgzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/solid.min.css" integrity="sha512-DzC7h7+bDlpXPDQsX/0fShhf1dLxXlHuhPBkBo/5wJWRoTU6YL7moeiNoej6q3wh5ti78C57Tu1JwTNlcgHSjg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet">
+    
+
+    {% comment %} fonts {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant:ital@0;1&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <script src="{% static 'js/index.js' %}" defer></script>
+    {% comment %} <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js" defer></script> {% endcomment %}
+
+    <style>
+      
+      {% comment %} for quotes {% endcomment %}
+      .dancing-script {
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+      {% comment %} for headers {% endcomment %}
+      .abril-fatface {
+        font-family: "Abril Fatface", serif;
+        font-style: normal;
+      }
+      {% comment %} for body texts and links {% endcomment %}
+      .cormorant {
+        font-family: "Cormorant", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+
+      .text-gradient {
+        background: linear-gradient(135deg, #ffe5a5 0%, #fc7789 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: slideIn 2s ease-in-out forwards;
+      }
+      
+      .pattern {
+        background-color: #f0f0f0;
+        opacity: 0.1;
+        background-image:  linear-gradient(135deg, #444cf7 25%, transparent 25%), linear-gradient(225deg, #444cf7 25%, transparent 25%), linear-gradient(45deg, #444cf7 25%, transparent 25%), linear-gradient(315deg, #444cf7 25%, #e5e5f7 25%);
+        background-position:  4px 0, 4px 0, 0 0, 0 0;
+        background-size: 4px 4px;
+        background-repeat: repeat;
+      }
+
+      .back-blur {
+        backdrop-filter: blur( 50px );
+        -webkit-backdrop-filter: blur( 50px );
+      }
+      
+      .appear {
+        animation: onAppear 2s forwards;
+      }
+      
+      @keyframes onAppear {
+        0%{
+          opacity: 0;
+          transform: translateY(-100%)
+        }
+        100%{
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
+      
+      .appearX {
+        animation: onAppearX 2s forwards;
+      }
+      
+      @keyframes onAppearX {
+        0%{
+          opacity: 0;
+          transform: translateX(-100%)
+        }
+        100%{
+          opacity: 1;
+          transform: translateX(0%);
+        }
+      }
+      
+      .appearRed {
+        animation: onAppearRed 2s forwards;
+      }
+      
+      @keyframes onAppearRed {
+        0%{
+          opacity: 0;
+          transform: translateX(100%)
+        }
+        100%{
+          opacity: 1;
+          transform: translateX(0%);
+        }
+      }
+
+      
+      .card {
+        position: relative;
+        width: 190px;
+        height: 254px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: blur(10px);
+      }
+
+      .card b {
+        position: absolute;
+        inset: 6px;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 2;
+      }
+
+      .card img {
+        position: absolute;
+        z-index: 3;
+        scale: .8;
+        opacity: 1;
+        transition: 0.5s;
+      }
+
+      .card:hover img {
+        scale: 0.5;
+        opacity: 0.9;
+        transform: translateY(-70px);
+      }
+
+      .card .content {
+        position: absolute;
+        z-index: 3;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: scale(0);
+        transition: 0.5s;
+      }
+
+      .card:hover .content {
+        transform: scale(1);
+        bottom: 15px;
+      }
+
+      .content .title {
+        position: relative;
+        color: #fff;
+        font-weight: 500;
+        line-height: 1em;
+        font-size: 1em;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .content .title span {
+        font-weight: 300;
+        font-size: 0.70em;
+        text-transform: none;
+      }
+
+      .content .sci {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 5px;
+      }
+
+      .sci li {
+        list-style: none;
+      }
+
+      .sci li a {
+        position: relative;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.5);
+        background: rgba(0, 0, 0, 0.2);
+        fill: currentColor;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        transition: 0.5s;
+      }
+
+      .sci li a:hover {
+        fill: currentColor;
+        color: rgba(255, 255, 255, 1);
+      }
+
+
+      {% comment %} scroll animation {% endcomment %}
+      .scroll-watcher {
+        height: 5px;
+        position: fixed;
+        z-index: 9999;
+        background-color: gold;
+        top: 0;
+        left: 0;
+        width: 100%;
+        scale: 0 1;
+        animation: scroll-watcher linear;
+        animation-timeline: scroll();
+        transform-origin: left;
+      }
+      @keyframes scroll-watcher {
+        to { scale: 1 1;}
+      }
+
+      .ClockIn {
+        scale: .8; opacity: 0;
+        animation: ClockIn linear forwards;
+        animation-timeline: view();
+        animation-range: entry;
+      }
+
+      @keyframes ClockIn {
+        to { scale: 1; opacity: 1;}
+      }
+
+      .border-bottom {
+        border: none;
+
+        &:hover {
+          border-bottom: 2px solid gold;
+          animation: border-bottom linear forwards;
+          transform-origin: left;
+        }
+      }
+      @keyframes border-bottom {
+        to {scale: 1 1;}
+      }
+    
+
+    </style>
+
+    {% tailwind_css %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+
+  {% comment %} js {% endcomment %}
+    <script>
+
+      // Toggle navigation
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileLinksContainer = document.getElementById('mobile-links-container');
+      const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+    </script>
+
+    <title>Omotee Beauty | Home of Luxury Perfumes</title>
+  </head>
+  <body class="h-screen m-0 p-0 bg-[#f0f0f0] dark:bg-gray-900 dark:text-white flex flex-col noise">
+
+    {% comment %} the navbar template {% endcomment %}
+    <nav id="header" class="back-blur dark:bg-gray-800 shadow px-5 py-3 z-40 w-full fixed top-0 left-0 opacity-90"> 
+
+      <div class="container mx-auto flex justify-between lg:px-8 items-center">
+        
+        <a
+          href="{% url 'home' %}"
+        >
+          <img 
+            src="{% static 'assets/png/logo-no-background.png' %}" 
+            alt="Omotee Beauty Logo" 
+            class="w-[90px] h-[70px]"/>
+        </a>
+
+
+        {% comment %} mobile {% endcomment %}
+        <div class="lg:hidden" id="mobile-menu"> 
+          <a class="text-4xl flex justify-center items-center cursor-pointer">
+            <i class="fa-solid fa-bars"></i>
+          </a>
+        </div>
+        
+        <div class="hidden slideIn ease-in-out duration-1000 left-0 top-0 w-full h-full backdrop-blur-sm items-center" id="mobile-links-container z-50">
+
+          <div class="float-right flex flex-col gap-20 justify-start items-center p-7 bg-[#ee7d23] w-64 h-full" id="mobile-links">
+    
+            <div id="close-mobile-menu" >
+              <a class="text-4xl fixed top-7 right-7 cursor-pointer" >
+                <i class="fa-solid fa-xmark"></i>
+              </a>
+            </div>
+        
+            <ul class="flex flex-col items-center gap-8">
+    
+                <li class="text-2xl cormorant font-semibold">
+                  <a
+                    href="{% url 'home' %}"
+                    class="text-gray-800 dark:text-gray-300 px-10 py-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 ease-in-out duration-300 "
+                  >
+                    Home
+                  </a>
+                </li>
+    
+                <li class="text-2xl cormorant font-semibold">
+                  <a
+                    href="{% url 'home' %}"
+                    class="text-gray-800 dark:text-gray-300 px-10 py-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 ease-in-out duration-300"
+                  >
+                    About
+                  </a>
+                </li>
+    
+                <li class="text-2xl cormorant font-semibold">
+                  <a
+                    href="{% url 'home' %}"
+                    class="text-gray-800 dark:text-gray-300 px-12 py-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 ease-in-out duration-300"
+                  >
+                    Blog
+                  </a>
+                </li>
+    
+                <li class="text-2xl cormorant font-semibold">
+                  <a
+                    href="{% url 'home' %}"
+                    class="text-gray-800 dark:text-gray-300 px-7 py-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 ease-in-out duration-300"
+                  >
+                    Products
+                  </a>
+                </li>
+    
+                <li class="text-2xl cormorant font-semibold">
+                  <a
+                    href="{% url 'home' %}"
+                    class="text-gray-800 dark:text-gray-300 px-8 py-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 ease-in-out duration-300"
+                  >
+                    Contact
+                  </a>
+                </li>
+    
+              </ul>
+    
+            </div>
+        </div>
+
+
+        {% comment %} desktop {% endcomment %}
+        <div class="hidden lg:flex lg:justify-end" id="desktop-nav-links">
+        
+          <ul class="flex justify-between items-center gap-4">
+
+            <li class="text-2xl cormorant font-semibold">
+              <a
+                href="{% url 'home' %}"
+                class="text-gray-800 dark:text-gray-300 px-2 py-2 hover:text-[gold] dark:hover:text-[gold] ease-in-out duration-300"
+              >
+                Home
+              </a>
+            </li>
+
+            <li class="text-2xl cormorant font-semibold">
+              <a
+                href="{% url 'home' %}"
+                class="text-gray-800 dark:text-gray-300 px-2 py-2 hover:text-[gold] dark:hover:text-[gold] ease-in-out duration-300"
+              >
+                About
+              </a>
+            </li>
+
+            <li class="text-2xl cormorant font-semibold">
+              <a
+                href="{% url 'home' %}"
+                class="text-gray-800 dark:text-gray-300 px-2 py-2 hover:text-[gold] dark:hover:text-[gold] ease-in-out duration-300"
+              >
+                Blog
+              </a>
+            </li>
+
+            <li class="text-2xl cormorant font-semibold">
+              <a
+                href="{% url 'home' %}"
+                class="text-gray-800 dark:text-gray-300 px-2 py-2 hover:text-[gold] dark:hover:text-[gold] ease-in-out duration-300"
+              >
+                Products
+              </a>
+            </li>
+
+            <li class="text-2xl cormorant font-semibold">
+              <a
+                href="{% url 'home' %}"
+                class="text-gray-800 dark:text-gray-300 px-2 py-2 hover:text-[gold] dark:hover:text-[gold] ease-in-out duration-300"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+    
+
+    <main class="container mx-auto w-full flex flex-col mt-24">
+      <div class="scroll-watcher"></div>
+
+      <section id="hero" class="container w-full h-screen flex flex-col lg:flex-row-reverse lg:justify-between gap-24 lg:items-center items-start px-5 lg:px-8 lg:py-4 lg:mx-0">
+
+
+        <div class="w-full lg:h-4/5 mt-6 lg:mt-0 md:w-3/5 md:h-full flex flex-col gap-2 justify-center px-3 lg:p-10 mx-auto lg:items-center">
+          <h1 id="hero-text" class="text-6xl lg:text-8xl appear dancing-script w-full text-center text-gradient delay-500 duration-500 z-10">Discover Your Signature Scent</h1>
+          <div class="p-8 back-blur m-auto w-full lg:w-2/3 rounded-xl appear ease-in-out delay-500 duration-1000">
+            <p class="text-md text-white cormorant w-full text-center lg:text-center">
+              Welcome to Omotee Beauty, your destination for high-quality yet affordable perfumes. Explore a wide range of captivating scents that suit every style and occasion.
+            </p>
+          </div>
+          <button class="bg-[goldenrod] hover:opacity-80 appear delay-500 text-white mx-auto ease-in-out duration-[1500ms] lg:mx-0 px-10 py-2 rounded-full w-fit cursor-pointer">
+            Explore Products
+          </button>
+        </div>
+
+        <div class="lg:h-screen lg:w-2/5 w-full flex items-center gap-0 justify-center lg:my-auto">
+          <img src="{% static 'assets/png/green-touch.png' %}" alt="" width="30%" class="appearX delay-500 duration-[1500ms]">
+          <img src="{% static 'assets/png/blue-touch-single.png' %}" alt="" width="30%" class="appear delay-1000 duration-[1500ms]">
+          <img src="{% static 'assets/png/red-touch.png' %}" alt="" width="30%" class="appearRed delay-[750ms] duration-[1500ms]">
+          
+        </div>
+        
+
+      </section>
+
+      <div id="bg-pattern" class="fixed top-0 left-0 pattern z-[-10] w-full h-full"></div>
+
+
+
+      <section id="products-page" class="relative mt-12 w-full flex flex-col items-center justify-center">
+        <h2 class="text-4xl abril-fatface text-center">Our Best Sellers</h2>
+
+        <p class="text-md mt-2 cormorant text-center">Explore our collection of best-selling perfumes that have captured the hearts of fragrance lovers.</p>
+
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-10 w-full lg:w-3/4 mx-auto">
+
+          
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <b></b>
+            <img class="w-full h-full object-contain top-0" src="{% static 'assets/png/majestic-touch.png' %}" alt="">
+            <div class="content">
+              
+              <p class="title">Majestic Oud<br><span>Sophistication and <br> Elegance</span></p>
+              <div class="flex w-full px-1 justify-between mt-1"><span>₦2,000</span><a href="#" class="hover:text-[gold]">Order</a></div>
+              
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+
+    </main>
+
+    {% comment %} <footer class="bg-white dark:bg-gray-800 shadow">
+      <div class="container mx-auto flex justify-between items-center">
+        <p class="text-blue-500 dark:text-blue-200">
+          &copy; {% now "DATE_FORMAT" %} Omotee Beauty
+        </p>
+        <p class="text-blue-500 dark:text-blue-200">Made with ❤️ by Omotee</p>
+      </div>
+    </footer>  {% endcomment %}
+    
+  </body>
+</html>
