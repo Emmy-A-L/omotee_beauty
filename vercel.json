@@ -1,0 +1,18 @@
+{
+    "builds": [
+      {
+        "src": "omotee_beauty/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/static/(.*)",
+        "dest": "staticfiles/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "omotee_beauty/wsgi.py"
+      }
+    ]
+  }
