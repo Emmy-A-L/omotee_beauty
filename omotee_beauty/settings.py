@@ -68,9 +68,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'omotee_beauty.urls'
 
-import environ
-env = environ.Env()
-DATABASES = {'default': env.db()}
+# import environ
+# env = environ.Env()
+# DATABASES = {'default': env.db()}
 
 TEMPLATES = [
     {
@@ -89,6 +89,7 @@ TEMPLATES = [
 ]
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directory where static files are collected
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
