@@ -57,7 +57,7 @@ cover/
 
 # Django stuff:
 *.log
-settings.py
+# settings.py
 /__pycache__/
 db.sqlite3
 db.sqlite3-journal
